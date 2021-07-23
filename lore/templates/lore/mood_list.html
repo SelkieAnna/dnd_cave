@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>DnD Cave</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">DnD Cave</a></h1>
+        </div>
+
+        {% for mood in moods %}
+            <div>
+                <h1><a href={{ mood.playlist_link }} target="_blank" rel="noopener noreferrer">{{ mood.name }}</a></h1>
+            </div>
+        {% endfor %}
+
+    </body>
+</html>
