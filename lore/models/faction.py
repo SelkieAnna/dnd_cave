@@ -9,3 +9,5 @@ class Faction(models.Model):
     factions = models.ManyToManyField('lore.Faction')
     items = models.ManyToManyField('lore.Item')
     places = models.ManyToManyField('lore.Place')
+
+    owner = models.ForeignKey('auth.User', related_name='faction_owner', on_delete=models.CASCADE)

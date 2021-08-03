@@ -6,3 +6,5 @@ class Item(models.Model):
 
     characters = models.ManyToManyField('lore.Character')
     factions = models.ManyToManyField('lore.Faction')
+
+    owner = models.ForeignKey('auth.User', related_name='item_owner', on_delete=models.CASCADE)

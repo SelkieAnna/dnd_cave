@@ -7,3 +7,5 @@ class Event(models.Model):
     characters = models.ManyToManyField('lore.Character')
     factions = models.ManyToManyField('lore.Faction')
     places = models.ManyToManyField('lore.Place')
+
+    owner = models.ForeignKey('auth.User', related_name='event_owner', on_delete=models.CASCADE)

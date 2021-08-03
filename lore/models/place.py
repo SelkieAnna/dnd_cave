@@ -16,3 +16,4 @@ class Place(models.Model):
     # characters = (characters that are linked to this location)
     # quests = (quests on this location)
     
+    owner = models.ForeignKey('auth.User', related_name='place_owner', on_delete=models.CASCADE)
